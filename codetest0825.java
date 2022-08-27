@@ -1,7 +1,7 @@
 // A,B를 입력받고 A-B를 출력하세요
 import java.util.Scanner;
 
-public class Main {
+public class codetest0825 {
     public static void main(String[] args) {
         // Your Program Goes Here
         Scanner sc = new Scanner(System.in);
@@ -11,7 +11,7 @@ public class Main {
         
         // 변수 선언 
         double[] score = new double[5];
-        // 왜 5를 입력받는건지? n=<5 라서?
+        // 왜 5를 입력받는건지? n=<5
         double sum = 0; 
 
         // 배열에 실수를 입력받아 저장
