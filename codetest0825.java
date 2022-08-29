@@ -1,7 +1,7 @@
 // A,B를 입력받고 A-B를 출력하세요
 import java.util.Scanner;
 
-public class Main {
+public class codetest0825 {
     public static void main(String[] args) {
         // Your Program Goes Here
         Scanner sc = new Scanner(System.in);
