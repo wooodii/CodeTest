@@ -20,7 +20,6 @@ public class 일곱난쟁이 {
             arr[i] = sc.nextInt();
             sum += arr[i];
         }
-
         // 오름차순으로 정렬하고 9명의 키의 합에서 2명을 뺐을 때, 100이 된경우
         // 그 수를 sp1과 sp2에 넣음
         Arrays.sort(arr);
