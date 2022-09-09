@@ -4,7 +4,7 @@ import java.util.Scanner;
 // 두개의 자연수를 입력받아  최대공약수 및 최소공백수 출력 프로그램 
 // 둘은 10000이하의 자연수이며 사이에 공백이 주어짐 
 
-public class gcd {
+public class gcd1 {
     public static void main (String args[]) {
         
         Scanner sc = new Scanner(System.in);
