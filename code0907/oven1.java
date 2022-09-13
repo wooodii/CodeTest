@@ -1,4 +1,4 @@
-package cdt0907;
+package code0907;
 
 import java.util.Scanner;
 
