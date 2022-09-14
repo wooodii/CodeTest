@@ -36,3 +36,10 @@ input1.pop();
 for (let answer of input){
     console.log(+answer.split(' ')[0] + +answer.split(' '[1])); 
 }
+
+
+// 참고 
+//readline 모듈
+//한번에 한줄씩 readable 스트림에서 데이터를 읽기 위한 인터페이스 제공 
+// readline.Interface에서는 readline.createInterface()메소드를 통해 생성가능 
+// 입력을 원하는 만큼 받기 위해서는 특정 조건에 rl.close() 추가 
