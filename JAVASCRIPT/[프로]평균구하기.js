@@ -16,6 +16,7 @@ function solution(arr){
 }
 
 //sol.2
+//reduce 함수 사용
 function average(array){
     return array.reduce(((a,b) => a+b) / array.length) 
 }
