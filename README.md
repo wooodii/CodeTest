@@ -1,6 +1,5 @@
 <br>
-<h2>📑 코테문제풀이 📑</h2> <br>
-
+<h2>📑 코테문제풀이 📑</h2>
 <h3>JAVA</h3> 
 <b>1) package</b> <br>
       Scanner <br>
