@@ -3,9 +3,9 @@
 
 <h3>JAVA</h3> 
  1) package <br>
-    Scanner <br>
-    BufferedReader <br> 
-    BufferedWriter <br>
+      Scanner <br>
+      BufferedReader <br> 
+      BufferedWriter <br>
 <br>
 
 <h3>SQL</h3>
