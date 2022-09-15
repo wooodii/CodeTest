@@ -2,7 +2,7 @@
 
 🎮 사용언어 <br>
 
-1) java 
+<h3>java</h3> 
 * package 
  - Scanner 
  - BufferedReader 
