@@ -2,7 +2,7 @@
 <h2>📑 코테문제풀이 📑</h2> <br>
 
 <h3>JAVA</h3> 
- 1) package <br>
+<b>1) package</b> <br>
       Scanner <br>
       BufferedReader <br> 
       BufferedWriter <br>
