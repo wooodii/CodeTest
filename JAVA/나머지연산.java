@@ -1,9 +1,10 @@
 package JAVA;
 
-// public class codetest0828 
+//0828 
+// charAt(), parseInt() 사용
 import java.util.Scanner;
 
-public class codetest0828 {
+public class 나머지연산 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int y = sc.nextInt();
@@ -36,6 +37,7 @@ public class codetest0828 {
         System.out.println((a % c * b % c) % c);
 
         Scanner in = new Scanner(System.in);
+
         // 곱셈과정 계산하기
         int A = in.nextInt();
         String B = in.next();
