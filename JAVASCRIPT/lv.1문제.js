@@ -12,3 +12,24 @@ function solution(x, n) {
 function solution(x,n) {
     return Array(n).fill(x).map((v,i) => (i+1)*v)
 }
+
+
+// 핸드폰 번호 가리기
+// 프로그래머스 모바일은 개인정보를 보낼 때 고객들의 
+// 전화번호 일부를 가림. 문자열의 폰넘버로 주어졌을 때
+// 전화번호 뒷 4자리를 제외한 나머지 숫자를 전부 *으로 가린 문자열을 리턴하는 함수
+
+function solution(phone_number) {
+    const answer = phone_number.length-4 ;
+    return '*'.repeat(answer) + phone_number.substring(answer); 
+}
+
+const solution = n => [...n].fill("*", n.length-4).join('');
+
+// 정규 표현식 
+// \d{4} 는 숫자가 4번 반복되는 문자열 
+// x(?=y) 오직 y 가 뒤따라오는 x에만 대응
+function hide_number(s) {
+    return s.replace(/\d(?=\d{4})/g,'*');
+
+}
