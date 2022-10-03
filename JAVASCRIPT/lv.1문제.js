@@ -1,4 +1,5 @@
 //0930 프로그래머스
+// 221003 프로그래머스 38line 
 // x만큼 간격이 있는 n개의 숫자 
 function solution(x, n) {
     var answer = [];
@@ -31,5 +32,28 @@ const solution = n => [...n].fill("*", n.length-4).join('');
 // x(?=y) 오직 y 가 뒤따라오는 x에만 대응
 function hide_number(s) {
     return s.replace(/\d(?=\d{4})/g,'*');
+}
 
+
+// 221003 프로그래머스 
+function solution(num1,num2){
+    let ans = num1 / num2 * 1000;
+    return parseInt(ans);
+}
+
+const solution = (num1, num2) => Math.floor(num1/num2 * 1000);
+
+function solution(num1,num2){
+    var ans = Math.floor((num1/num2)*1000);
+    return ans; 
+}
+
+//Math.trunc : 소수점 삭제하고 정수만 반환
+function solution (num1, num2) {
+    return Math.trunc(num1/num2*1000);
+}
+
+// ~~ 틸트 연산자 == Math.floor
+function solution(num1, num2) {
+    return ~~(num1/num2*1000);
 }
