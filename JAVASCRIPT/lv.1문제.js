@@ -1,5 +1,7 @@
-//0930 프로그래머스
+// 220930 프로그래머스
 // 221003 프로그래머스 38line 
+// 221004 프로그래머스 64line
+
 // x만큼 간격이 있는 n개의 숫자 
 function solution(x, n) {
     var answer = [];
@@ -57,3 +59,42 @@ function solution (num1, num2) {
 function solution(num1, num2) {
     return ~~(num1/num2*1000);
 }
+
+
+// 배열 두배 만들기
+// sol1
+function solution(numbers) {
+    var answer = [];
+    for(let i = 0; i<numbers.length; i++){
+        answer.push(numbers[i]*2);
+    }
+    return answer;
+}
+
+// sol2
+function solution(numbers) {
+    return numbers.map(i=>i*2);
+}
+
+//sol3 
+function solution(numbers) {
+    // reduce 배열 ((previous, currentValue) => previous +currentValue), initalValue);
+    return numbers.reduce((a,b) => [(a,b) =>  [...a,b*2],[]]);
+}
+
+// 중앙값 구하기 
+// sol1
+const solution = array => {
+    const mid = Math.floor(array.length / 2),
+    nums = [...array].sort((a, b) => a - b);
+    return array.length % 2 !== 0 ? nums[mid] : (nums[mid - 1] + nums[mid]) / 2;
+};
+
+// sol2 
+// at메소드 : 정수 값을 받아서 배열 값에 해당하는 인덱스 요소를 반환 
+// 양/음수 모두 지정가능하고 음수 의 경우 배열의 뒤에서부터 인덱스를 셈
+function solution(array) {
+    return array.sort((a,b) => {return a-b;}).at(Math.floor(array.length/2))
+}
+
+
