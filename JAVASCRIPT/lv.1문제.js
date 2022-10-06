@@ -1,6 +1,7 @@
 // 220930 프로그래머스
 // 221003 프로그래머스 38line 
 // 221004 프로그래머스 64line
+// 221006 프로그래머스 102line
 
 // x만큼 간격이 있는 n개의 숫자 
 function solution(x, n) {
@@ -97,4 +98,25 @@ function solution(array) {
     return array.sort((a,b) => {return a-b;}).at(Math.floor(array.length/2))
 }
 
+
+// 점의 위치를 받아서 몇사분면인지 구하기
+function solution(dot) {
+    const [x, y] = dot; // 배열 안에 변수를 넣어주기 !!!
+    if (y > 0) return x > 0 ? 1 : 2;
+    return x < 0 ? 3 : 4;
+}
+
+
+function solution(dot) {
+    return dot[0] > 0 ? dot[1] > 0 ? 1 : 4 : dot[1] > 0 ? 2 : 3;
+}
+
+//1006
+// 정수 배열 array가 매개변수로 주어질 때, 최빈값을 return 하도록 solution 함수 작성하기 
+function solution(array) {
+    const counts = array.reduce((a, c) => (a[c] ? { ...a, [c]: a[c] + 1 } : { ...a, [c]: 1 }), {});
+    const max = Math.max(...Object.values(counts));
+    const modes = Object.keys(counts).filter(key => counts[key] === max);
+    return modes.length === 1 ? +modes[0] : -1;
+    }
 
