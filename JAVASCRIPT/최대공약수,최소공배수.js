@@ -1,4 +1,5 @@
 // 0925 프로그래머스 
+// 1008 프로그래머스 
 // 최대공약수와 최소공배수 
 // 유클리드 호제법
 // 주어진 인풋 중 큰 값을 a, 작은값은 b 로 해서
@@ -34,3 +35,20 @@ function gcdlcm(a, b) {
 
 // 아래는 테스트로 출력해 보기 위한 코드입니다.
 console.log(gcdlcm(3,12));
+
+
+// 프로그래머스 분수의 덧셈 
+// 유클리드 호제법
+// 분수의 덧셈 
+
+function solution(denum1, num1, denum2, num2) {
+    var answer = [0, 0];
+    let first = num1 * denum2 + num2 * denum1;
+    let second = num1 * num2;
+    let gcd = (a, b) => (a % b === 0 ? b : gcd(b, a % b));
+    let min = gcd(first, second);
+    answer[0] = first / min;
+    answer[1] = second / min;
+  
+    return answer;
+  }
