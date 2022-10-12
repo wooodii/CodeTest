@@ -189,3 +189,7 @@ function solution(n) {
     return Array(n).fill(1).map((v,i) => n+i).filter(v=> v%2 === 1);
 }
 
+// 1008 프로그래머스 편지
+function solution(message) {
+    return message.length *2 
+}
