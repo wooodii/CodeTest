@@ -112,7 +112,7 @@ function solution(dot) {
     return dot[0] > 0 ? dot[1] > 0 ? 1 : 4 : dot[1] > 0 ? 2 : 3;
 }
 
-// 최빈값 
+// 최빈값  
 // 정수 배열 array가 매개변수로 주어질 때, 최빈값을 return 하도록 solution 함수 작성하기 
 function solution(array) {
     const counts = array.reduce((a, c) => (a[c] ? { ...a, [c]: a[c] + 1 } : { ...a, [c]: 1 }), {});
@@ -120,7 +120,49 @@ function solution(array) {
     const modes = Object.keys(counts).filter(key => counts[key] === max);
     return modes.length === 1 ? +modes[0] : -1;
     }
-    
+
+const solution = (array) => {
+    const cnt = array.reduce((acc,cur) =>({
+        ...acc, [cur] : (acc[cur] || 0) + 1
+    }), {})
+
+    const items = Object.keys(counter).map((key) => [
+        Number(key), counter[key]
+    ]).sort((a,b) => b[1] - a[1])
+
+    if(items[0][1] === items?.[1]?.[1]) {
+        return -1
+    }
+    return items[0][0];
+}
+
+
+function solution(array) {
+    let m = new Map();
+    array.forEach(e=>m.set(e,m.get(e)+1||1));
+    m=[...m].sort((a,b)=>b[1]-a[1]);
+    let max=m[0][1];
+    m = m.filter(e=>e[1]===max).map(e=>e[0]);
+    return m.length > 1 ? -1 : m[0]
+}
+
+function solution(array) {
+    array.sort((a, b)=>a-b);
+    var answer = 0;
+    var CH = Array.from(new Set(array));
+    var VA = {};
+    for(let i of array){
+        if(String(i) in VA) VA[i]++;
+        else VA[i] = 1;
+    }
+    let sorted = Object.entries(VA).sort((a, b) => b[1] - a[1]);
+    answer = (sorted.length === 1) || sorted[0][1] !== sorted[1][1] ? 
+        Number(sorted[0][0]) : -1
+
+    return answer;
+}
+
+
 // 1007 프로그래머스 짝수는 싫어요
 function solution(n) {
     const answer  = []
