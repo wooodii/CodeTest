@@ -1,5 +1,6 @@
 // 221009 프로그래머스 나이 출력
 // 221010 프로그램머스 할인비율 
+// 221016 프로그래머스 
 
 function solution(age) {
     var answer = 0;
@@ -65,4 +66,27 @@ function solution(price) {
 //삼항연산, 분수 곱
 function solution(price) {
     return price>=500000 ? parseInt(price*8/10) : (price>=300000 ? parseInt(price*9/10) : (price >= 100000 ? parseInt(price*19/20) : price))
+}
+
+// 특정 문자 제거하기 
+// replaceAll()
+function solution(my_string, letter) {
+    return my_string.replaceAll(letter, '');
+  }
+  
+
+  
+function solution(my_string, letter) {
+    const answer = my_string.split(letter).join('')
+    return answer;
+}
+
+
+function solution(my_string, letter) {
+    return Array.from(my_string).filter(t => t !== letter).join('');
+}
+// 정규식
+function solution(my_string, letter) {
+    let reg = new RegExp(letter, 'g');
+    return my_string.replace(reg, '');
 }
