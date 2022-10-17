@@ -1,6 +1,7 @@
 // 221009 프로그래머스 나이 출력
 // 221010 프로그램머스 할인비율 
 // 221016 프로그래머스 
+// 221017 프로그래머스 제곱근
 
 function solution(age) {
     var answer = 0;
@@ -74,19 +75,27 @@ function solution(my_string, letter) {
     return my_string.replaceAll(letter, '');
   }
   
-
-  
 function solution(my_string, letter) {
     const answer = my_string.split(letter).join('')
     return answer;
 }
 
-
 function solution(my_string, letter) {
     return Array.from(my_string).filter(t => t !== letter).join('');
 }
+
 // 정규식
 function solution(my_string, letter) {
     let reg = new RegExp(letter, 'g');
     return my_string.replace(reg, '');
+}
+
+// 제곱근 구하기  - Number.isInteger 
+function solution(n) {
+    return Number.isInteger(Math.sqrt(n)) ? 1 : 2;
+  }
+
+function solution(n) {
+    return Math.sqrt(n) === Math.floor(Math.sqrt(n)) ? 1 : 2
+
 }
